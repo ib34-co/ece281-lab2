@@ -43,8 +43,8 @@ architecture test_bench of sevenseg_decoder_tb is
   o_seg_n : 	out std_logic_vector(6 downto 0)
   );
   end component sevenseg_decoder;
-  signal sw_in1     : std_logic_vector(6 downto 0) := "0000000"; -- the numbers being added
-  signal dis_out1   : std_logic_vector(3 downto 0) := "0000";
+  signal sw_in1     : std_logic_vector(3 downto 0) := "0000"; -- the numbers being added
+  signal dis_out1   : std_logic_vector(6 downto 0) := "0000000";
 begin
 
 	--	Port map: wire your component up to the switches and seven-segment display cathodes
