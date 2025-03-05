@@ -37,10 +37,10 @@ entity sevenseg_decoder_tb is
 end sevenseg_decoder_tb;
 
 architecture test_bench of sevenseg_decoder_tb is
-component sevenseg_decoder is
+  component sevenseg_decoder is
   port (
-  sw_in  :	in  std_logic_vector(3 downto 0);
-  dis_out: 	out std_logic_vector(6 downto 0)
+  i_Hex  :	in  std_logic_vector(3 downto 0);
+  o_seg_n : 	out std_logic_vector(6 downto 0)
   );
   end component sevenseg_decoder;
   signal sw_in1     : std_logic_vector(6 downto 0) := "0000000"; -- the numbers being added
@@ -50,8 +50,8 @@ begin
 	--	Port map: wire your component up to the switches and seven-segment display cathodes
 	-----------------------------------------------------	
 	sevenseg_decoder_utt : sevenseg_decoder port map(
-	sw_in=> sw_in1(3 downto 0),
-	dis_out=>dis_out1(6 downto 0)
+	i_Hex=> sw_in1(3 downto 0),
+	o_seg_n=>dis_out1(6 downto 0)
 	);
 	test_process : process 
 	begin
