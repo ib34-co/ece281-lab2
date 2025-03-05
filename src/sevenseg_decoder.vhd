@@ -37,6 +37,8 @@ entity sevenseg_decoder is
 end sevenseg_decoder;
 
 architecture Behavioral of sevenseg_decoder is
+
+begin
 with i_Hex select
 o_seg_n <=  "1111110" when "0000",
         "0110000" when "0001",
@@ -49,7 +51,5 @@ o_seg_n <=  "1111110" when "0000",
         "1111111" when "1000",
         "1110011" when "1001",
         "0000000" when others;
-begin
-
 
 end Behavioral;
