@@ -55,7 +55,7 @@ begin
 	);
 	test_process : process 
 	begin
-	-- will test the numerical output of 0 to 5
+	-- will test the numerical output of 0 to 15
 	sw_in1 <= "0000"; wait for 10 ns;
 	       assert (dis_out1 = "1111110") report "bad with zero" severity failure;
 	sw_in1 <= "0001"; wait for 10 ns;
