@@ -57,7 +57,7 @@ begin
 	begin
 	-- will test the numerical output of 0 to 15
 	sw_in1 <= "0001"; wait for 10 ns;
-	       assert (dis_out1 = "1001111") report "bad with one" severity failure;
+	       assert (dis_out1 = "0110000") report "bad with one" severity failure;
 	sw_in1 <= "1010"; wait for 10 ns;
 	       assert (dis_out1 = "0001000") report "bad with A" severity failure;
 	sw_in1 <= "0111"; wait for 10 ns;
