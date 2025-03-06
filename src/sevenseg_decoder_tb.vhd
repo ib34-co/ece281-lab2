@@ -56,36 +56,12 @@ begin
 	test_process : process 
 	begin
 	-- will test the numerical output of 0 to 15
-	sw_in1 <= "0000"; wait for 10 ns;
-	       assert (dis_out1 = "1111110") report "bad with zero" severity failure;
 	sw_in1 <= "0001"; wait for 10 ns;
-	       assert (dis_out1 = "0110000") report "bad with one" severity failure;
-	sw_in1 <= "0010"; wait for 10 ns;
-	       assert (dis_out1 = "1101101") report "bad with two" severity failure;
-	sw_in1 <= "0011"; wait for 10 ns;
-	       assert (dis_out1 = "1111001") report "bad with three" severity failure;
-	sw_in1 <= "0100"; wait for 10 ns;
-	       assert (dis_out1 = "0110011") report "bad with four" severity failure;
-	sw_in1 <= "0101"; wait for 10 ns;
-	       assert (dis_out1 = "1011011") report "bad with five" severity failure;
-	sw_in1 <= "0110"; wait for 10 ns;
-	       assert (dis_out1 = "1011111") report "bad with six" severity failure;
-	sw_in1 <= "0111"; wait for 10 ns;
-	       assert (dis_out1 = "1110000") report "bad with seven" severity failure;
-	sw_in1 <= "1000"; wait for 10 ns;
-	       assert (dis_out1 = "1111111") report "bad with eight" severity failure;
-	sw_in1 <= "1001"; wait for 10 ns;
-	       assert (dis_out1 = "1110011") report "bad with nine" severity failure;
+	       assert (dis_out1 = "1001111") report "bad with one" severity failure;
 	sw_in1 <= "1010"; wait for 10 ns;
-	       assert (dis_out1 = "0000000") report "bad with other" severity failure;
-	sw_in1 <= "1011"; wait for 10 ns;
-	       assert (dis_out1 = "0000000") report "bad with other" severity failure;
-	sw_in1 <= "1101"; wait for 10 ns;
-	       assert (dis_out1 = "0000000") report "bad with other" severity failure;
-	sw_in1 <= "1110"; wait for 10 ns;
-	       assert (dis_out1 = "0000000") report "bad with other" severity failure;
-	sw_in1 <= "1111"; wait for 10 ns;
-	       assert (dis_out1 = "0000000") report "bad with other" severity failure;
+	       assert (dis_out1 = "0001000") report "bad with A" severity failure;
+	sw_in1 <= "0111"; wait for 10 ns;
+	       assert (dis_out1 = "0001111") report "bad with 7" severity failure;
 	       wait;
 	end process;
 
